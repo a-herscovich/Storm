@@ -1,34 +1,36 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ProductInfoModal.scss";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
 const ProductInfoModal = ({ product, show, handleClose }) => {
+  const [width, setWidth] = useState(0);
   const screenWidth = useRef(window.innerWidth);
+
+  useEffect(() => {
+    setWidth(screenWidth.current)
+  }, [screenWidth])
 
   return (
     // Bootstrap styling for modal - modal is centered for desktop and fullScreen for mobile
     <Modal
-      centered={screenWidth.current > 390}
-      fullscreen={screenWidth.current <= 390}
+      centered={width > 390}
+      fullscreen={width <= 390}
       className="modal"
       show={show}
       onHide={handleClose}
     >
       {/* Display logo and title in mobile header for fullScreen mobile */}
-      {screenWidth.current > 390 && (
-        <>
-          <div className="modalLogoAndMenu">
-            <div className="logo">
-              <img src="/logo.png" alt="logo" />
-              <h1>STORM</h1>
-            </div>
-            <div className="mobileMenu">
-              <i class="bi bi-list fs-3"></i>
-            </div>
-          </div>
-        </>
-      )}
+      <div className="modalLogoAndMenu">
+        <div className="logo">
+          <img src="/logo.png" alt="logo" />
+          <h1>STORM</h1>
+        </div>
+        <div className="mobileMenu">
+          <i class="bi bi-list fs-3"></i>
+        </div>
+      </div>
+
       {/* header displays the name of the selected product from props */}
       <div className="modalHeader">
         <span className="productName">{product}</span>

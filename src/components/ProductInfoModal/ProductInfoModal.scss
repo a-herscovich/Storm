@@ -79,6 +79,10 @@
   cursor: pointer;
 }
 
+.modalLogoAndMenu {
+  display: none;
+}
+
 // Mobile styling
 @media (max-width: 390px) {
   .modal-dialog {
