@@ -1,0 +1,57 @@
+.search {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.searchBarContainer {
+  display: inline-flex;
+}
+
+.searchBar {
+  width: 260px;
+  height: 44px;
+  border: 1px solid #dcdfe3;
+  display: flex;
+  margin-right: 12px;
+
+  .bi-search {
+    text-align: center;
+    color: #666e7d80;
+    padding: 10px 12px;
+  }
+}
+
+.searchInput {
+  padding: 10px;
+  padding-left: 0;
+  outline: none;
+  border: 0;
+}
+
+.searchBtn {
+  background-color: #605dec !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  padding: 10px 24px !important;
+}
+
+.searchBtn:focus {
+  border: none;
+  outline: none;
+}
+
+.errorText {
+  margin-top: 4px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: #f93233;
+}
+
+@media only screen and (max-width: 660px) {
+  // accommodates for the error text to prevent products from shifting down
+  .search {
+    height: 68px;
+  }
+}

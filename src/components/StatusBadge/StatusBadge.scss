@@ -1,0 +1,34 @@
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  width: 83px;
+  height: 28px;
+  padding: 10px;
+}
+
+.default {
+  background-color: #ededfd;
+  border-color: #ededfd;
+  color: #8885f0;
+}
+
+.active {
+  background-color: #ebf5eb;
+  border-color: #ebf5eb;
+  color: #37ac2d;
+}
+
+.warning {
+  background-color: #fff4e4;
+  border-color: #fff4e4;
+  color: #e99517;
+}
+
+.error {
+  background-color: #ffeff0;
+  border-color: #ffeff0;
+  color: #f93233;
+}

@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 5% auto;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.logo,
+.rightCol,
+.secondaryActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondaryActions {
+  margin-left: 26px;
+}
+
+.logoAndMobileMenu {
+  margin-right: 20px;
+}
+
+.logo {
+  font-family: Verdana, sans-serif;
+  font-weight: 100;
+
+  img {
+    height: 44px;
+  }
+  h1 {
+    font-weight: 100;
+  }
+}
+
+.secondaryActions {
+  color: #605dec;
+  i:hover {
+    cursor: pointer;
+  }
+  .bi {
+    padding: 7px 12px;
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenu {
+  display: none !important;
+}
+
+// When screen size is decreased to 839px, the secondary actions (icons) disappear
+@media only screen and (min-width: 661px) and (max-width: 839px) {
+  .secondaryActions {
+    display: none !important;
+  }
+}
+
+// Mobile styling
+// Most mobile styling is based on 390px width but in this case, the search bar
+// needed to be moved down at the 660px breakpoint
+@media only screen and (max-width: 660px) {
+  .header {
+    width: 90%;
+    margin: 5% auto 5px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  .logoAndMobileMenu {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .logo {
+      width: 210px;
+      display: inline-flex;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    img {
+      height: 44px;
+    }
+  }
+
+  .mobileMenu {
+    display: block !important;
+  }
+
+  .secondaryActions {
+    display: none;
+  }
+
+  .mobileMenu {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .searchBar {
+    width: 220px !important;
+  }
+
+  .dropdownItem {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    .bi {
+      padding: 7px 12px 7px 0;
+      color: #605dec;
+    }
+  }
+}

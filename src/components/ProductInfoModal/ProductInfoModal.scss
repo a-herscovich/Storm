@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap");
+
+// !important tag was needed to override the Bootstrap styling throughout the file
+.modal {
+  margin: 0;
+}
+
+.modal-dialog {
+  max-width: none !important;
+}
+
+.modal-content {
+  width: 684px !important;
+  height: 616px !important;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.modalHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 30px;
+}
+
+.productName {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.productImage {
+  img {
+    width: 314px !important;
+    height: 303px !important;
+  }
+}
+
+.closeButton {
+  background-color: #f9f9fb !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-family: "Inter", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 12px 24px !important;
+  border: none !important;
+}
+
+.closeButton:focus {
+  outline: none;
+  border: none;
+}
+
+// used grid to display the image and description side-by-side
+.imageAndDescription {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+
+  ul {
+    padding-inline-start: 18px;
+  }
+}
+
+.info {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.bi-x:hover {
+  cursor: pointer;
+}
+
+// Mobile styling
+@media (max-width: 390px) {
+  .modal-dialog {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 390px !important;
+    margin: 0 !important;
+    height: 737px;
+  }
+  .modalHeader {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .productName {
+    max-width: 300px;
+    max-height: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 20px;
+  }
+  .bi-x {
+    padding-right: 20px;
+  }
+  // class names in this format rather than camelCase are bootstrap class names
+  .modal-dialog-centered {
+    min-height: unset;
+  }
+  .modal-content {
+    height: 100% !important;
+    width: 390px !important;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .modalHeader {
+    padding: 0;
+    max-width: 390px;
+  }
+  .imageAndDescription {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-top: 0;
+
+    img {
+      width: 278px !important;
+      height: 240px !important;
+    }
+  }
+
+  .closeButton {
+    width: 358px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: unset;
+  }
+
+  .modalLogoAndMenu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5% auto 0 auto;
+    .logo {
+      width: 210px;
+      display: inline-flex;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    img {
+      height: 44px;
+    }
+  }
+}

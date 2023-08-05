@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:opsz@6..12&display=swap");
+
+.products {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+.productHeader {
+  margin: auto 0;
+  height: 24px;
+}
+
+.tableHeading {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.tableSubheading {
+  font-weight: 400;
+  font-size: 12px;
+  color: #808080;
+}
+
+table {
+  text-align: center;
+  border: 1px solid #e4e4ef;
+}
+
+tr {
+  border: 1px solid #e4e4ef !important;
+}
+
+th {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 18px 0;
+}
+
+td {
+  font-weight: 400;
+  padding: 18px 16px;
+}
+
+.statusData {
+  display: flex;
+  justify-content: center;
+  padding: 14px 30px;
+}
+
+.product {
+  text-align: start;
+  padding: 0px 17px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.serial,
+.quantityLabel {
+  font-size: 12px;
+  color: #808080;
+}
+
+.total {
+  text-align: right;
+}
+
+.totalHeader {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bi-chevron-down:hover {
+  cursor: pointer;
+}
+
+.totalHeader,
+.total {
+  border-left: 1px solid #e4e4ef;
+}
+
+.viewAll {
+  margin: 10px auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.quantityLabel {
+  display: none;
+}
+
+// Mobile styling
+
+// For small screens (up to 390px)
+// Hide all components with a hide tag
+@media (max-width: 390px) {
+  // hide-lg are the components to be hidden on a larger breakpoint - ie. the first to disappear
+  .hide-lg {
+    display: none;
+  }
+  // hide-md are the components to be hidden on a medium breakpoint - ie. the second to disappear
+  .hide-md {
+    display: none;
+  }
+  // hide-sm are the components to be hidden on a smaller breakpoint - ie. the last to disappear
+  .hide-sm {
+    display: none;
+  }
+  .product {
+    padding: 8px 18px 8px 16px;
+  }
+  // dispalys the quantity beside the serial number on small screen sizes
+  .productInfo {
+    display: inline-flex;
+  }
+  .quantityLabel {
+    display: block;
+  }
+}
+
+// For medium screens (between 391px and 500px)
+// Hide components with hide-md and hide-lg tags
+@media (min-width: 391px) and (max-width: 500px) {
+  .hide-lg {
+    display: none;
+  }
+  .hide-md {
+    display: none;
+  }
+}
+
+// For large screens (between 501 and 785)
+// Online hide components with hide-lg tags
+@media (min-width: 501px) and (max-width: 785px) {
+  .hide-lg {
+    display: none;
+  }
+}
