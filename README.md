@@ -14,20 +14,22 @@ Browse and search products using an API.
 
 ## 📸 Screenshots
 ### Home page default view
-![Main page](https://github.com/a-herscovich/pokedex/blob/master/public/images/pokedex_main.png)
+![Main page](https://github.com/a-herscovich/Storm/assets/45631902/2a01072a-430e-4b17-9223-86151e04e222")
 
-### Hover effect over Card component
-![Card Hover](https://github.com/a-herscovich/pokedex/blob/master/public/images/hover_card.png)
+### Home page with results filtered by search text "Pro"
+![Filtered Results](https://github.com/a-herscovich/Storm/assets/45631902/b87d5fce-429f-4666-9530-61e126c9ea9e)
 
-### Card Popover
-Additional information on a Pokemon Card is displayed as a Popover which can be opened and closed by clicking on the Pokemon Card: <br />
-![Card Information Popover](https://github.com/a-herscovich/pokedex/blob/master/public/images/card_popover.png)
+### Sorted Results by Price low-to-high
+![Sort by price](https://github.com/a-herscovich/Storm/assets/45631902/ded20579-134c-4a50-b987-06b11af277ee)
 
-### Interactive Searchbar
-Before: <br />
-![Searchbar Before](https://github.com/a-herscovich/pokedex/blob/master/public/images/searchbar_before.png) <br />
-On Search: <br />
-![Searchbar After](https://github.com/a-herscovich/pokedex/blob/master/public/images/searchbar_after.png)
+### Product modal opened by clicking product name
+Desktop: <br />
+![Desktop](https://github.com/a-herscovich/Storm/assets/45631902/8b353050-3bb7-4aed-99e9-5825da13b142) <br /><br />
+Mobile: <br />
+![Mobile](https://github.com/a-herscovich/Storm/assets/45631902/c0aee919-47c1-4f01-95d3-f061dbb22ea8)
+
+### Home page mobile view with menu open
+![Mobile main page](https://github.com/a-herscovich/Storm/assets/45631902/0ac5cdcd-c879-4eb7-bd60-6ded76a0ed27)
 
 ## 🏃‍♂️ Run
 ### Development
