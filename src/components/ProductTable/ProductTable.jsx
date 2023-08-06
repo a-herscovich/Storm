@@ -155,7 +155,7 @@ const ProductTable = ({ filterText, products, setFilterText }) => {
             filterText && filterText.length
               ? productsArray.filter(filterByText).length
               : productsArray.length
-          } of 64 results`}
+          } of 10 results`}
         </span>
       </div>
       <table>
