@@ -1,6 +1,7 @@
 .search {
   display: flex;
   flex-flow: column nowrap;
+  margin-top: 12px;
 }
 
 .searchBarContainer {
@@ -40,6 +41,10 @@
 .searchBtn:focus {
   border: none;
   outline: none;
+}
+
+.errorTextContainer {
+  height: 12px;
 }
 
 .errorText {

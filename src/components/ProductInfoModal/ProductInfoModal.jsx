@@ -14,8 +14,8 @@ const ProductInfoModal = ({ product, show, handleClose }) => {
   return (
     // Bootstrap styling for modal - modal is centered for desktop and fullScreen for mobile
     <Modal
-      centered={width > 390}
-      fullscreen={width <= 390}
+      centered={width > 608}
+      fullscreen={width <=608}
       className="modal"
       show={show}
       onHide={handleClose}
