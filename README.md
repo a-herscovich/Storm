@@ -14,8 +14,8 @@ Netlify Deploy Link: https://main--musical-muffin-620e5e.netlify.app/
 
 
 ## 📸 Screenshots
-### Home page default view
-![Main page](https://github.com/a-herscovich/Storm/assets/45631902/2a01072a-430e-4b17-9223-86151e04e222")
+### Home page default view (error text shown)
+![Main page with error text shown](https://github.com/a-herscovich/Storm/assets/45631902/096d20c3-d157-4e48-9110-feb25b924afb)
 
 ### Home page with results filtered by search text "Pro"
 ![Filtered Results](https://github.com/a-herscovich/Storm/assets/45631902/b87d5fce-429f-4666-9530-61e126c9ea9e)
