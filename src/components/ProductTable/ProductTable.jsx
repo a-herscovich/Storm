@@ -26,6 +26,11 @@ const ProductTable = ({ filterText, products, setFilterText }) => {
     setProductsArray(Object.values(products).flat());
   }
 
+  // when products are loaded into component (on render), setProducts to a readable format
+  useEffect(() => {
+    products && setProductsArray(Object.values(products).flat());
+  }, [products]);
+
   // Filtering function to include only products where the title includes the search text
   // filterText from props has already been trimmed and set to lowercase
   function filterByText(product) {
@@ -102,26 +107,7 @@ const ProductTable = ({ filterText, products, setFilterText }) => {
     );
   };
 
-  // when products from props or filterText changes, useEffect will trigger state changes which will set the productsMarkup.
-  // we either call the map function on a filtered array if there is search text,
-  // or we call the map function on the non-filtered array if no search text
-  useEffect(() => {
-    products && getProductsArray();
-    setProductsMarkup(
-      filterText && filterText.length > 0
-        ? productsArray &&
-            productsArray
-              .filter(filterByText)
-              .map((item) => productMarkupTemplate(item))
-        : productsArray &&
-            productsArray.map((item) => productMarkupTemplate(item))
-    );
-  }, [products, filterText]);
-
-  // when productsArray changes, useEffect will trigger state changes which will set the productsMarkup.
-  // productsArray changes when we sort the data
-  // we either call the map function on a filtered array if there is search text,
-  // or we call the map function on the non-filtered array if no search text
+  // Setting product markup
   useEffect(() => {
     filterText
       ? setProductsMarkup(
@@ -133,7 +119,7 @@ const ProductTable = ({ filterText, products, setFilterText }) => {
       : setProductsMarkup(
           productsArray.map((item) => productMarkupTemplate(item))
         );
-  }, [productsArray]);
+  }, [products, filterText, ascending, sorted]);
 
   // If no products are returned, show a message
   if (!products) {

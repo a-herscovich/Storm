@@ -1,15 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProductInfoModal.scss";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
 const ProductInfoModal = ({ product, show, handleClose }) => {
-  const [width, setWidth] = useState(0);
-  const screenWidth = useRef(window.innerWidth);
-
+  const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
-    setWidth(screenWidth.current)
-  }, [screenWidth])
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+  }, []);
 
   return (
     // Bootstrap styling for modal - modal is centered for desktop and fullScreen for mobile
